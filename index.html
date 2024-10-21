@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/52.jpg" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelRoy</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Подключаем шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Начало Header -->
+    <header>
+        <!-- Блок с фоновым видео -->
+        <div class="gif-background">
+            <!-- Фоновое видео -->
+            <video autoplay muted loop>
+                <source src="img/main_bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Навигационное меню с якорными ссылками -->
+            <nav>
+                <ul>
+                    <li><a href="#tracks">Tracks</a></li>
+                    <li><a href="#sound-kits">Sound Kits</a></li>
+                    <li><a href="#licenses">Memberships</a></li>
+                    <li><a href="#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Поисковая строка -->
+            <div class="search-bar">
+                <input type="text" placeholder="What type of track are you looking for?">
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
+    </header>
+
+   <!-- Секция с треками -->
+<section id="tracks" class="track-list">
+    <h2>Track List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Time</th>
+                <th>BPM</th>
+                <th>Tags</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio1">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (1).jpg" alt="Track Image" class="track-img"> ECO
+                    <audio id="audio1" src="mp3/track1.mp3"></audio>
+                </td>
+                <td>01:58</td>
+                <td>148</td>
+                <td>Playboi Carti, Ken Carson</td>
+                <td>
+                    <button class="buy-button" data-title="ECO" data-price="$30.00">Buy for $30.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio2">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (2).jpg" alt="Track Image" class="track-img"> LOV3ME
+                    <audio id="audio2" src="mp3/track2.mp3"></audio>
+                </td>
+                <td>02:03</td>
+                <td>130</td>
+                <td>Ken Carson</td>
+                <td>
+                    <button class="buy-button" data-title="LOV3ME" data-price="$30.00">Buy for $30.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio3">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (3).jpg" alt="Track Image" class="track-img"> NIGHT
+                    <audio id="audio3" src="mp3/track3.mp3"></audio>
+                </td>
+                <td>03:05</td>
+                <td>120</td>
+                <td>Travis Scott</td>
+                <td>
+                    <button class="buy-button" data-title="NIGHT" data-price="$35.00">Buy for $35.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio4">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (4).jpg" alt="Track Image" class="track-img"> MOON
+                    <audio id="audio4" src="mp3/track4.mp3"></audio>
+                </td>
+                <td>02:45</td>
+                <td>140</td>
+                <td>Drake, Future</td>
+                <td>
+                    <button class="buy-button" data-title="MOON" data-price="$40.00">Buy for $40.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio5">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (5).jpg" alt="Track Image" class="track-img"> SKY
+                    <audio id="audio5" src="mp3/track5.mp3"></audio>
+                </td>
+                <td>02:50</td>
+                <td>150</td>
+                <td>Lil Uzi Vert</td>
+                <td>
+                    <button class="buy-button" data-title="SKY" data-price="$35.00">Buy for $35.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio6">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (6).jpg" alt="Track Image" class="track-img"> STAR
+                    <audio id="audio6" src="mp3/track6.mp3"></audio>
+                </td>
+                <td>03:10</td>
+                <td>135</td>
+                <td>Nav, 21 Savage</td>
+                <td>
+                    <button class="buy-button" data-title="STAR" data-price="$45.00">Buy for $45.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio7">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (7).jpg" alt="Track Image" class="track-img"> HYPE
+                    <audio id="audio7" src="mp3/track7.mp3"></audio>
+                </td>
+                <td>02:40</td>
+                <td>155</td>
+                <td>Kanye West</td>
+                <td>
+                    <button class="buy-button" data-title="HYPE" data-price="$30.00">Buy for $30.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio8">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (8).jpg" alt="Track Image" class="track-img"> SHINE
+                    <audio id="audio8" src="mp3/track8.mp3"></audio>
+                </td>
+                <td>02:15</td>
+                <td>160</td>
+                <td>Young Thug</td>
+                <td>
+                    <button class="buy-button" data-title="SHINE" data-price="$40.00">Buy for $40.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio9">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (9).jpg" alt="Track Image" class="track-img"> WAVE
+                    <audio id="audio9" src="mp3/track9.mp3"></audio>
+                </td>
+                <td>03:20</td>
+                <td>125</td>
+                <td>Trippie Redd</td>
+                <td>
+                    <button class="buy-button" data-title="WAVE" data-price="$35.00">Buy for $35.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio10">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (10).jpg" alt="Track Image" class="track-img"> HEAT
+                    <audio id="audio10" src="mp3/track10.mp3"></audio>
+                </td>
+                <td>02:25</td>
+                <td>145</td>
+                <td>Pop Smoke</td>
+                <td>
+                    <button class="buy-button" data-title="HEAT" data-price="$50.00">Buy for $50.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio11">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (11).jpg" alt="Track Image" class="track-img"> FLOW
+                    <audio id="audio11" src="mp3/track11.mp3"></audio>
+                </td>
+                <td>03:00</td>
+                <td>130</td>
+                <td>Post Malone</td>
+                <td>
+                    <button class="buy-button" data-title="FLOW" data-price="$40.00">Buy for $40.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio12">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (12).jpg" alt="Track Image" class="track-img"> BEAT
+                    <audio id="audio12" src="mp3/track12.mp3"></audio>
+                </td>
+                <td>02:35</td>
+                <td>150</td>
+                <td>A$AP Rocky</td>
+                <td>
+                    <button class="buy-button" data-title="BEAT" data-price="$45.00">Buy for $45.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio13">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (13).jpg" alt="Track Image" class="track-img"> ZONE
+                    <audio id="audio13" src="mp3/track13.mp3"></audio>
+                </td>
+                <td>03:05</td>
+                <td>140</td>
+                <td>Gunna</td>
+                <td>
+                    <button class="buy-button" data-title="ZONE" data-price="$35.00">Buy for $35.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio14">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (14).jpg" alt="Track Image" class="track-img"> BOOST
+                    <audio id="audio14" src="mp3/track14.mp3"></audio>
+                </td>
+                <td>02:50</td>
+                <td>145</td>
+                <td>Roddy Ricch</td>
+                <td>
+                    <button class="buy-button" data-title="BOOST" data-price="$50.00">Buy for $50.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio15">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (15).jpg" alt="Track Image" class="track-img"> SPIN
+                    <audio id="audio15" src="mp3/track15.mp3"></audio>
+                </td>
+                <td>02:30</td>
+                <td>155</td>
+                <td>DaBaby</td>
+                <td>
+                    <button class="buy-button" data-title="SPIN" data-price="$30.00">Buy for $30.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio16">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (16).jpg" alt="Track Image" class="track-img"> WILD
+                    <audio id="audio16" src="mp3/track16.mp3"></audio>
+                </td>
+                <td>03:15</td>
+                <td>135</td>
+                <td>Migos</td>
+                <td>
+                    <button class="buy-button" data-title="WILD" data-price="$40.00">Buy for $40.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio17">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (17).jpg" alt="Track Image" class="track-img"> ENERGY
+                    <audio id="audio17" src="mp3/track17.mp3"></audio>
+                </td>
+                <td>02:20</td>
+                <td>140</td>
+                <td>Cardi B</td>
+                <td>
+                    <button class="buy-button" data-title="ENERGY" data-price="$35.00">Buy for $35.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio18">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (18).jpg" alt="Track Image" class="track-img"> PEAK
+                    <audio id="audio18" src="mp3/track18.mp3"></audio>
+                </td>
+                <td>02:55</td>
+                <td>150</td>
+                <td>J Cole</td>
+                <td>
+                    <button class="buy-button" data-title="PEAK" data-price="$45.00">Buy for $45.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio19">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (19).jpg" alt="Track Image" class="track-img"> GRIND
+                    <audio id="audio19" src="mp3/track19.mp3"></audio>
+                </td>
+                <td>03:00</td>
+                <td>130</td>
+                <td>Meek Mill</td>
+                <td>
+                    <button class="buy-button" data-title="GRIND" data-price="$40.00">Buy for $40.00</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="play-button" data-audio="audio20">
+                        <img src="img/play-icon.png" alt="Play Icon" class="play-icon">
+                        <img src="img/pause-icon.png" alt="Pause Icon" class="pause-icon" style="display: none;">
+                    </button>
+                    <img src="img/1 (20).jpg" alt="Track Image" class="track-img"> VIBE
+                    <audio id="audio20" src="mp3/track20.mp3"></audio>
+                </td>
+                <td>02:45</td>
+                <td>145</td>
+                <td>Future</td>
+                <td>
+                    <button class="buy-button" data-title="VIBE" data-price="$50.00">Buy for $50.00</button>
+                </td>
+            </tr>
+                     
+        </tbody>
+    </table>
+</section>
+
+
+<!-- Секция с наборами звуков -->
+<section id="sound-kits" class="sound-kits">
+    <h2>Sound Kits</h2>
+    <!-- Контейнер для прокрутки со стрелками -->
+    <div class="scroll-container">
+        <button class="scroll-button left">&lt;</button>
+        <div class="kits">
+            <div class="kit">
+                <img src="img/2 (1).jpg" alt="Nova Drum Kit" class="kit-img">
+                <h3>"NOVA" Drum Kit</h3>
+                <p>This kit includes modern drums with crisp kicks, snappy snares, and thumping 808s. Perfect for trap and hip-hop beats.</p>
+                <p><button class="buy-button" data-title="NOVA Drum Kit" data-price="$30.00">Buy for $30.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (2).jpg" alt="Riot Serum Bank" class="kit-img">
+                <h3>"RIOT" Serum Bank</h3>
+                <p>A powerful collection of presets for Serum, designed for aggressive sounds, including basses, leads, and more.</p>
+                <p><button class="buy-button" data-title="RIOT Serum Bank" data-price="$30.00">Buy for $30.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (3).jpg" alt="Galaxy Vocal Chops" class="kit-img">
+                <h3>"GALAXY" Vocal Chops</h3>
+                <p>A celestial collection of vocal chops, perfect for creating dreamy, atmospheric melodies.</p>
+                <p><button class="buy-button" data-title="GALAXY Vocal Chops" data-price="$40.00">Buy for $40.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (4).jpg" alt="Neon FX Pack" class="kit-img">
+                <h3>"NEON" FX Pack</h3>
+                <p>Neon-colored effects pack filled with risers, impacts, and atmospheric transitions to elevate your tracks.</p>
+                <p><button class="buy-button" data-title="NEON FX Pack" data-price="$50.00">Buy for $50.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (5).jpg" alt="Phoenix 808 Pack" class="kit-img">
+                <h3>"PHOENIX" 808 Pack</h3>
+                <p>Hard-hitting 808s, perfect for heavy trap and drill beats.</p>
+                <p><button class="buy-button" data-title="PHOENIX 808 Pack" data-price="$60.00">Buy for $60.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (6).jpg" alt="Infinity Synth Loops" class="kit-img">
+                <h3>"INFINITY" Synth Loops</h3>
+                <p>A collection of endless synth loops, perfect for adding depth and energy to your productions.</p>
+                <p><button class="buy-button" data-title="INFINITY Synth Loops" data-price="$70.00">Buy for $70.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (7).jpg" alt="Shadow Percussion Pack" class="kit-img">
+                <h3>"SHADOW" Percussion Pack</h3>
+                <p>Dark and mysterious percussive sounds that add a unique touch to any beat.</p>
+                <p><button class="buy-button" data-title="SHADOW Percussion Pack" data-price="$80.00">Buy for $80.00</button></p>
+            </div>
+            <div class="kit">
+                <img src="img/2 (8).jpg" alt="Future Melody Loops" class="kit-img">
+                <h3>"FUTURE" Melody Loops</h3>
+                <p>Melodic loops designed for forward-thinking producers, featuring synths, pads, and leads.</p>
+                <p><button class="buy-button" data-title="FUTURE Melody Loops" data-price="$90.00">Buy for $90.00</button></p>
+            </div>
+                       
+        </div>
+        <button class="scroll-button right">&gt;</button>
+    </div>
+</section>
+
+
+    <!-- Секция с лицензиями -->
+    <section id="licenses" class="licenses">
+        <h2>Licensing Info</h2>
+        <div class="license-options">
+            <div class="license">
+                <h3>Basic Lease - $30.00</h3>
+                <p>Unlimited use for streaming platforms</p>
+            </div>
+            <div class="license">
+                <h3>Professional Lease - $100.00</h3>
+                <p>Includes WAV files and trackout stems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с подписками -->
+    <section id="memberships" class="memberships">
+        <h2>Memberships</h2>
+        <div class="membership-options">
+            <div class="membership">
+                <h3>Basic Membership - $50.00</h3>
+                <p>Monthly downloads and exclusive content</p>
+            </div>
+            <div class="membership">
+                <h3>Elite Membership - $200.00</h3>
+                <p>Includes all features and premium access</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <footer>
+        <div class="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdSkEQo0DKEjJA8tLfpWQV3kACUQOa66h-Sq7k0Lxzl2jgk4g/formResponse" method="POST" target="_self">
+                <input type="text" name="entry.145756959" placeholder="Your Name" required>
+                <input type="email" name="entry.1069942288" placeholder="Your Email" required>
+                <input type="text" name="entry.908588504" placeholder="Subject">
+                <textarea name="entry.624526886" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+                
+            </form>
+            
+        </div>
+    </footer>
+    <!-- Ссылки на социальные сети -->
+<div class="social-links">
+    <a href="https://vk.com/feelroy" target="_blank" class="social-link vk">
+        <img src="img/vk.png" alt="VK">
+    </a>
+    <a href="https://www.instagram.com/feelroy_" target="_blank" class="social-link instagram">
+        <img src="img/insta.png" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/@feelroyofficial" target="_blank" class="social-link youtube">
+        <img src="img/youtube.png" alt="YouTube">
+    </a>
+</div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
